@@ -1,10 +1,12 @@
 /* eslint-disable jsx-a11y/anchor-has-content, react/prop-types */
 import React from 'react';
+import Image from './Image';
 
 const HealthCard = ({
   title,
   subtitle,
   image,
+  sizes,
 }) => (
   <div className="col-sm">
     <div className="TempoCategoryTile  u-focusTile">
@@ -18,10 +20,11 @@ const HealthCard = ({
               position: 'relative',
             }}
           >
-            <img
+            <Image
               alt="Nothing to sneeze at. Get relief from seasonal allergies with Zyrtec, Flonase, and more."
               aria-hidden="true"
               src={image}
+              sizes={sizes}
               className="TempoCategoryTile-img"
               style={{
                 position: 'absolute',
