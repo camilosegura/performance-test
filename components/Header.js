@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
+import './styles.scss';
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-light">

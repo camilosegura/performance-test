@@ -12,6 +12,7 @@ const Card = ({
     style={{
       margin: '1rem auto',
       width: '10rem',
+      minHeight: '236px',
     }}
   >
     {/* <img className="card-img-top" src={image} alt="Card cap" /> */}

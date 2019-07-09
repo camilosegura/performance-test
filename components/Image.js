@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import Context from '../context';
+import InView from './InView';
 
 export const getSize = ({
   sizes,
@@ -22,7 +23,9 @@ const Image = ({
   const url = `${src}?odnWidth=${size}`;
 
   return (
-    <img src={url} alt={alt} {...props} />
+    <InView>
+      <img src={url} alt={alt} {...props} />
+    </InView>
   );
 };
 
