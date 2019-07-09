@@ -14,12 +14,17 @@ const InView = ({ children }) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           setVisible(true);
+          observer.disconnect();
         }
       });
     }, options);
 
     observer.observe(wrapperEl.current);
-  });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div ref={wrapperEl}>
